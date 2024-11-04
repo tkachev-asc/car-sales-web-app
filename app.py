@@ -10,11 +10,11 @@ st.header('Data Viewer')
 #st.dataframe(df)
 #Visualizing distribution of vehicle types by the manufacturer
 st.header('Vehicle Types by Manufacturer')
-fig = px.histogram(df, x='Manufacturer', color='Type')
+fig = px.histogram(df, x='model')
 st.write(fig)
 #Histogram of condition vs. model_year
 st.header("Histogram of `Condition` vs `Model Year`")
-fig = px.histogram(df, x='price')
+fig = px.histogram(df, x='condition')
 st.write(fig)
 #Comparing price distribution between manufacturers
 st.header('Comparing Price Distribution between Manufacturers')
