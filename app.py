@@ -39,6 +39,5 @@ else:
 fig = px.histogram(df_filtered,
                    x='price',
                    nbins = 30,
-                   histnorm = histnorm,
-                   barmode = 'Overlay')
+                   histnorm = histnorm)
 st.write(fig)
