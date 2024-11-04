@@ -7,7 +7,7 @@ df = pd.read_csv('vehicles_us.csv')
 df['manufacturer'] = df['model'].apply(lambda x: x.split()[0])
 #Displaying DataFrame with Streamlit
 st.header('Data Viewer')
-st.dataframe(df)
+#st.dataframe(df)
 #Visualizing distribution of vehicle types by the manufacturer
 st.header('Vehicle Types by Manufacturer')
 fig = px.hisogram(df, x='Manufacturer', color='Type')
