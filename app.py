@@ -14,7 +14,7 @@ fig = px.histogram(df, x='Manufacturer', color='Type')
 st.write(fig)
 #Histogram of condition vs. model_year
 st.header("Histogram of `Condition` vs `Model Year`")
-fig = px.histogram(df, x='Model Year', color='Condition')
+fig = px.histogram(df, x='price')
 st.write(fig)
 #Comparing price distribution between manufacturers
 st.header('Comparing Price Distribution between Manufacturers')
@@ -37,9 +37,8 @@ if normalize:
 else:
   histnorm = None
 fig = px.histogram(df_filtered,
-                   x='Price',
+                   x='price',
                    nbins = 30,
-                   color = 'Manufacturer',
                    histnorm = histnorm,
                    barmode = 'Overlay')
 st.write(fig)
